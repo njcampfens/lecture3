@@ -4,8 +4,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 
-DATABASE_URL='postgres://nestor:P35cad0-@zu1@localhost:5432/lecture3'
 
+DATABASE_URL = 'postgres://{username}:{password}@{host}:{port}/{database_name}'
 
 engine = create_engine(DATABASE_URL)
 db = scoped_session(sessionmaker(bind=engine))

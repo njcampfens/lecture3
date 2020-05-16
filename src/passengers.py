@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
 # We create the conection to the database
-DATABASE_URL = 'postgres://{username}:{password}@{host}:{port}/{database_name}'
+DATABASE_URL = 'postgres://nestor:{password}@localhost:5432/lecture3'
 
 engine = create_engine(DATABASE_URL)
 db = scoped_session(sessionmaker(bind=engine))
